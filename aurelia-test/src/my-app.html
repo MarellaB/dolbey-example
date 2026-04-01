@@ -1,5 +1,22 @@
 <div class="bg-gray-800 min-h-screen text-white">
-  <h1 class="text-3xl font-bold text-red-500">My Aurelia App</h1>
+  <div class="w-full p-4 flex items-center gap-8 bg-slate-50 text-slate-600">
+    <h1 class="text-3xl font-bold text-slate-400">Clinical Architect</h1>
+    <div class="flex gap-8 flex-1">
+      <p>Dashboard</p>
+      <p>Patient Queue</p>
+      <p>Reporting</p>
+      <p>Knowledge Base</p>
+    </div>
+    <div class="flex gap-8">
+      <au-icon name="Bell"></au-icon>
+      <au-icon name="Cog"></au-icon>
+    </div>
+    <div class="flex border-l border-slate-600 pl-4">
+      <div class="rounded-xl bg-slate-950 px-2 py-2">
+        <au-icon name="User"></au-icon>
+      </div>
+    </div>
+  </div>
   <styled-button action.bind="testAction" fill=true><au-icon name="Home" size="14"></au-icon>New Encounter</styled-button>
   <div class="flex gap-2">
     <styled-button variant="accept">Accept</styled-button>
