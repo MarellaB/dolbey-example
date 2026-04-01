@@ -9,7 +9,7 @@ export class StyledButton {
 
   get buttonClasses() {
     return {
-      'px-4 py-2 text-sm font-bold rounded-sm': true,
+      'px-4 py-2 text-sm font-bold rounded-sm flex items-center gap-2': true,
       'text-white bg-sky-600': this.variant === 'primary',
       'text-slate-600 bg-slate-200': this.variant === 'secondary',
       'text-green-500 bg-green-800': this.variant === 'accept',
