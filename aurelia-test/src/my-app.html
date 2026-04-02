@@ -1,7 +1,10 @@
-<div class="bg-gray-800 min-h-screen text-white">
-  <div class="w-full p-4 flex items-center gap-8 bg-slate-50 text-slate-600">
-    <h1 class="text-3xl font-bold text-slate-400">Clinical Architect</h1>
-    <div class="flex gap-8 flex-1">
+<import from="./components/ai-suggested-codes/ai-suggested-codes"></import>
+
+<div class="h-screen text-white flex flex-col bg-slate-100">
+
+  <div class="w-full p-4 flex items-center gap-8 text-slate-600">
+    <h1 class="text-2xl font-bold text-slate-900">Clinical Architect</h1>
+    <div class="flex gap-8 flex-1 font-bold text-neutral-400">
       <p>Dashboard</p>
       <p>Patient Queue</p>
       <p>Reporting</p>
@@ -17,11 +20,41 @@
       </div>
     </div>
   </div>
-  <styled-button action.bind="testAction" fill=true><au-icon name="Home" size="14"></au-icon>New Encounter</styled-button>
-  <div class="flex gap-2">
-    <styled-button variant="accept">Accept</styled-button>
-    <styled-button variant="destructive">Reject</styled-button>
-    <styled-button variant="secondary">E</styled-button>
+
+  <div class="flex flex-1 min-h-0 w-screen gap-6 pr-6">
+    <div class="bg-neutral-300 p-2">
+
+    </div>
+
+    <div class="py-2 flex gap-6 w-full h-full">
+      <column class="flex-1 h-full" name="Patient Note" icon-name="NotebookPen">
+        <p au-slot="chip" class="text-xs bg-sky-200 text-sky-700 py-1 px-2 font-bold">INPATIENT</p>
+
+        <div au-slot="content">
+
+        </div>
+      </column>
+
+      <ai-suggested-codes></ai-suggested-codes>
+
+      <column class="h-full" name="Coding Summary" icon-name="NotepadText">
+        <div au-slot="content"></div>
+      </column>
+    </div>
+
   </div>
-  <h1>TESTING</h1>
+
+  <div class="w-screen bg-slate-200 px-4 py-2 flex text-neutral-500 text-sm font-semibold">
+    <div class="grid grid-cols-2 gap-4 divide-neutral-300 divide-x-2 text-center">
+      <div class="flex items-center gap-3"><div class="p-1 bg-emerald-600 rounded-full w-1 h-1"></div>System Active</div>
+      <p>Last Sync: 12:12 am</p>
+    </div>
+    <div class="flex-1"></div>
+
+    <div class="flex gap-6 underline">
+      <p>Accessibility</p>
+      <p>Data Privacy & Security</p>
+    </div>
+  </div>
+
 </div>
