@@ -1,9 +1,9 @@
 <import from="./code-card/code-card"></import>
 
-<column class="h-full" name="Suggested ICD Codes" icon-name="Brain">
+<column class="h-full w-full" name="Suggested ICD Codes" icon-name="Brain">
   <p show.bind="pendingItems.length > 0" au-slot="chip" class="text-xs text-neutral-500">${pendingItems.length} Pending</p>
 
-  <div au-slot="content" class="flex-col gap-4 flex">
+  <div au-slot="content" class="flex-col gap-4 flex min-w-96 w-full h-full">
     <div class="flex-1 flex flex-col gap-2">
       <code-card
         repeat.for="code of codes"

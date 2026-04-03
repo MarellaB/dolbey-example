@@ -1,0 +1,19 @@
+<column class="h-full w-full" name="Patient Note" icon-name="NotebookPen">
+  <p au-slot="chip" class="text-xs bg-sky-200 text-sky-700 py-1 px-2 font-bold">INPATIENT</p>
+
+  <div au-slot="content">
+    <div>
+      <h3 class="text-lg font-bold text-slate-500">Patient Notes:</h3>
+      <textarea value.bind="patientNotes" class="border border-slate-200 w-full min-h-64 resize-none outline-none focus:ring-2 ring-sky-400 rounded-lg p-2 bg-slate-50 text-sm text-slate-700 font-bold"></textarea>
+      
+      <div class="float-right pt-4">
+        <styled-button disabled.bind="patientNotes.length <= 0"><au-icon name="Wand"></au-icon>Begin Code Suggestion</styled-button>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      
+    </div>
+  </div>
+
+</column>
