@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-3 bg-slate-50 border-l-4 border-sky-600 p-4 rounded-lg overflow-hidden">
+  <div class="flex justify-between items-center">
+    <p class="bg-sky-100 text-sky-700 px-2 font-bold">
+      ${code.code}
+    </p>
+
+    <p class="text-xs font-semibold text-neutral-400 capitalize">${code.status}</p>
+  </div>
+  <p class="font-extrabold text-lg">${code.name}</p>
+  <div if.bind="code.status !== 'rejected' && code.status !== 'accepted'" class="grid grid-cols-2 gap-2 w-full">
+    <styled-button action.bind="accept" fill="true" variant="accept"><au-icon name="CircleCheck" size="14"></au-icon>Accept</styled-button>
+    <styled-button action.bind="reject" fill="true" variant="destructive"><au-icon name="CircleX" size="14"></au-icon>Reject</styled-button>
+  </div>
+
+  <div if.bind="code.status === 'accepted'" class="w-full">
+    <styled-button action.bind="undo" fill="true" variant="accept"><au-icon name="CircleCheck" size="14"></au-icon>Accepted</styled-button>
+  </div>
+  <div if.bind="code.status === 'rejected'" class="w-full">
+    <styled-button action.bind="undo" fill="true" variant="destructive"><au-icon name="CircleX" size="14"></au-icon>Rejected</styled-button>
+  </div>
+</div>
