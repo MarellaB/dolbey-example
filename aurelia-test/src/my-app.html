@@ -1,14 +1,10 @@
-<import from="./components/ai-suggested-codes/ai-suggested-codes"></import>
-<import from="./components/patient-notes/patient-notes"></import>
+<import from="@/components/navbar/navbar"></import>
 
 <div class="h-screen text-white flex flex-col bg-slate-100">
 
   <div class="w-full p-4 flex items-center gap-8 text-slate-600">
     <h1 class="text-2xl font-bold text-slate-900">Clinical Architect</h1>
-    <div class="flex gap-8 flex-1 font-bold text-neutral-400">
-      <p>Dashboard</p>
-      <p>ICD Code Database</p>
-    </div>
+    <navbar class="flex-1"></navbar>
     <div class="flex gap-8">
       <au-icon name="Bell"></au-icon>
       <au-icon name="Cog"></au-icon>
@@ -20,10 +16,7 @@
     </div>
   </div>
 
-  <div class="flex flex-1 min-h-0 w-screen gap-6 px-4 max-w-7xl m-auto py-4">
-    <patient-notes class="flex-1"></patient-notes>
-    <ai-suggested-codes></ai-suggested-codes>
-  </div>
+  <au-viewport class="flex-1 min-h-0 flex flex-col"></au-viewport>
 
   <div class="w-screen bg-slate-200 px-4 py-2 flex text-neutral-500 text-sm font-semibold">
     <div class="grid grid-cols-2 gap-4 divide-neutral-300 divide-x-2 text-center">
@@ -37,5 +30,4 @@
       <p>Data Privacy & Security</p>
     </div>
   </div>
-
 </div>
